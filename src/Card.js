@@ -1,7 +1,9 @@
-import React from 'react';
+import React from "react";
 
-const Card = () => {
-  <div style={{ color: 'black' }}>
-    <p>Carousel Cards</p>
-  </div>
-}
+const Card = ({ name }: props) => {
+  <div style={{ color: "black" }}>
+    <p>{name}</p>
+  </div>;
+};
+
+export default Card;
