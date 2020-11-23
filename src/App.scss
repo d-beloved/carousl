@@ -1,0 +1,25 @@
+.carousel {
+  display: flex;
+  margin: 20rem 15rem;
+
+  .direction {
+    background: none;
+    border: none;
+    outline: none;
+    padding: 0;
+    width: 10%;
+
+    .arrow {
+      width: 50%;
+    }
+  }
+
+  .card-div {
+    width: 50vw;
+
+    .card-scroll {
+      display: flex;
+      overflow: hidden;
+    }
+  }
+}

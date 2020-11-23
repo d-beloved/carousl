@@ -1,0 +1,13 @@
+.card {
+  background-color: black;
+  min-width: 49%;
+  max-width: 50%;
+  height: 28vh;
+  text-align: center;
+  margin-right: 10px;
+  border-radius: 12px;
+
+  .text {
+    color: white;
+  }
+}

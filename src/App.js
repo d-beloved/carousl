@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import Card from "./Card";
-import "./App.css";
+import "./App.scss";
 import leftCircle from "./asset/leftarrow.svg";
 import rightCircle from "./asset/img_92071.png";
 
@@ -40,42 +40,19 @@ function App() {
   };
 
   return (
-    <div
-      style={{
-        display: "flex",
-        margin: "20rem 15rem",
-      }}
-    >
-      <button
-        style={{
-          background: "none",
-          border: "none",
-          outline: "none",
-          padding: "0",
-          width: "10%"
-        }}
-        onClick={prev}
-      >
-        <img style={{ width: "50%" }} src={leftCircle} alt="left button" />
+    <div className= 'carousel'>
+      <button className='direction' onClick={prev}>
+        <img className='arrow' src={leftCircle} alt="left button" />
       </button>
-      <div style={{ width: '50vw' }}>
-        <main style={{ display: "flex", overflow: 'hidden' }} ref={carouslRef}>
+      <div className='card-div'>
+        <main className='card-scroll' ref={carouslRef}>
           {CardArray.map((carousel, i) => (
             <Card {...carousel} key={i} />
           ))}
         </main>
       </div>
-      <button
-        style={{
-          background: "none",
-          border: "none",
-          outline: "none",
-          padding: "0",
-          width: "10%"
-        }}
-        onClick={next}
-      >
-        <img style={{ width: "50%" }} src={rightCircle} alt="right button" />
+      <button className='direction' onClick={next}>
+        <img className='arrow' src={rightCircle} alt="right button" />
       </button>
     </div>
   );
