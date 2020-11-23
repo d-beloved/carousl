@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import Card from "./Card";
 import "./App.css";
 import leftCircle from "./asset/leftarrow.svg";
-import rightCircle from "./asset/rightarrow.svg";
+import rightCircle from "./asset/img_92071.png";
 
 const CardArray = [
   { name: "first card" },
@@ -43,7 +43,7 @@ function App() {
     <div
       style={{
         display: "flex",
-        margin: "20rem 0",
+        margin: "20rem 15rem",
       }}
     >
       <button
@@ -52,13 +52,14 @@ function App() {
           border: "none",
           outline: "none",
           padding: "0",
+          width: "10%"
         }}
         onClick={prev}
       >
-        <img style={{ width: "10%" }} src={leftCircle} alt="left button" />
+        <img style={{ width: "50%" }} src={leftCircle} alt="left button" />
       </button>
-      <div>
-        <main style={{ display: "flex" }} ref={carouslRef}>
+      <div style={{ width: '50vw' }}>
+        <main style={{ display: "flex", overflow: 'hidden' }} ref={carouslRef}>
           {CardArray.map((carousel, i) => (
             <Card {...carousel} key={i} />
           ))}
@@ -70,10 +71,11 @@ function App() {
           border: "none",
           outline: "none",
           padding: "0",
+          width: "10%"
         }}
         onClick={next}
       >
-        <img style={{ width: "10%" }} src={rightCircle} alt="right button" />
+        <img style={{ width: "50%" }} src={rightCircle} alt="right button" />
       </button>
     </div>
   );
